@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriGuide AI — Powered by IBM Granite</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="logo-icon">🥗</span>
+      <span class="brand-name">NutriGuide <span class="ibm-tag">IBM Granite AI</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/plan">My Plan</a></li>
+      <li><a href="/chat">Ask NutriGuide</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🤖 Agentic AI · IBM Granite LLM</div>
+      <h1>Your Personal<br /><span class="highlight">Nutrition Intelligence</span></h1>
+      <p class="hero-sub">
+        Get a science-backed, personalised 7-day nutrition plan tailored to your age,
+        diet preference, medical history, and lifestyle — powered by IBM Granite AI.
+      </p>
+      <div class="hero-actions">
+        <a href="/plan" class="btn btn-primary">Generate My Plan 🚀</a>
+        <a href="/chat" class="btn btn-secondary">Ask NutriGuide 💬</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="food-circle">
+        <div class="food-ring ring1">
+          <span>🥦</span><span>🍎</span><span>🥕</span><span>🫐</span>
+        </div>
+        <div class="food-ring ring2">
+          <span>🥑</span><span>🍋</span><span>🌾</span><span>🥚</span>
+        </div>
+        <div class="center-icon">🥗</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section class="features">
+    <h2 class="section-title">Why NutriGuide?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>IBM Granite LLM</h3>
+        <p>Powered by IBM's enterprise-grade Granite foundation model via watsonx.ai for trusted, accurate responses.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Ethical AI & Guardrails</h3>
+        <p>Built-in safety filters prevent harmful advice. Every response follows HAM (Helpful, Accurate, Mindful) principles.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🩺</div>
+        <h3>Medical Awareness</h3>
+        <p>Adapts plans for conditions like diabetes and hypertension, with clear disclaimers and doctor referrals.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Location-Aware</h3>
+        <p>Tailors food suggestions to your city and country, leveraging locally available seasonal ingredients.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3>Downloadable Plan</h3>
+        <p>Save your personalised 7-day nutrition plan as a Markdown (.md) file for easy reference and sharing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Agentic Q&A Chat</h3>
+        <p>Ask any nutrition question and get instant, context-aware answers from your personal AI nutritionist.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Share Your Profile</h4>
+        <p>Enter your name, age, diet preference, medical history, and location.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>AI Analyses & Plans</h4>
+        <p>IBM Granite AI processes your profile and generates a personalised plan.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Get Your Plan</h4>
+        <p>View, download (.md), and chat with NutriGuide for ongoing guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DISCLAIMER BANNER ── -->
+  <section class="disclaimer-banner">
+    <div class="disclaimer-content">
+      <span class="disc-icon">⚕️</span>
+      <p><strong>Medical Disclaimer:</strong> NutriGuide is an AI tool for informational purposes only.
+        It is not a substitute for professional medical advice. Always consult a qualified healthcare provider
+        before making significant dietary changes, especially if you have a medical condition.</p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>🥗 <strong>NutriGuide AI</strong> — Powered by <strong>IBM Granite</strong> via watsonx.ai</p>
+      <p class="footer-sub">Built following Agentic AI SDLC · HAM Principles · Ethical AI Guidelines</p>
+      <p class="footer-sub">© 2024 NutriGuide AI. For educational and informational purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
