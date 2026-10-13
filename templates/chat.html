@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask NutriGuide — Agentic AI Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="logo-icon">🥗</span>
+      <span class="brand-name">NutriGuide <span class="ibm-tag">IBM Granite AI</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/plan">My Plan</a></li>
+      <li><a href="/chat" class="active">Ask NutriGuide</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-container">
+    <div class="page-header">
+      <h1>💬 Ask NutriGuide</h1>
+      <p>Your 24/7 AI nutrition assistant — powered by IBM Granite. Ask anything about diet, nutrition, and healthy living.</p>
+    </div>
+
+    <!-- ── CHAT INTERFACE ── -->
+    <div class="chat-layout">
+      <!-- Suggested Questions -->
+      <div class="suggestions-panel">
+        <h3>💡 Suggested Questions</h3>
+        <div class="suggestion-chips">
+          <button class="chip" onclick="sendSuggestion(this)">What foods are good for diabetes?</button>
+          <button class="chip" onclick="sendSuggestion(this)">How much protein do I need daily?</button>
+          <button class="chip" onclick="sendSuggestion(this)">What is a balanced diet?</button>
+          <button class="chip" onclick="sendSuggestion(this)">Foods to avoid for high blood pressure?</button>
+          <button class="chip" onclick="sendSuggestion(this)">How can I lose weight safely?</button>
+          <button class="chip" onclick="sendSuggestion(this)">What are superfoods?</button>
+          <button class="chip" onclick="sendSuggestion(this)">How much water should I drink daily?</button>
+          <button class="chip" onclick="sendSuggestion(this)">Best vegetarian protein sources?</button>
+          <button class="chip" onclick="sendSuggestion(this)">What vitamins do I need?</button>
+          <button class="chip" onclick="sendSuggestion(this)">Tips for better digestion?</button>
+        </div>
+
+        <div class="ethics-box">
+          <h4>🛡️ AI Ethics & Safety</h4>
+          <ul>
+            <li>Helpful, Accurate & Mindful (HAM) responses</li>
+            <li>No harmful or extreme diet advice</li>
+            <li>Guardrails against unsafe content</li>
+            <li>Always recommends professional consultation</li>
+            <li>Powered by IBM Granite LLM</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Chat Window -->
+      <div class="chat-panel">
+        <div class="chat-window" id="chatWindow">
+          <!-- Welcome message -->
+          <div class="chat-msg bot-msg">
+            <div class="msg-avatar">🥗</div>
+            <div class="msg-bubble">
+              <p>👋 Hello! I'm <strong>NutriGuide</strong>, your personal AI nutrition assistant powered by IBM Granite.</p>
+              <p>I can help you with:</p>
+              <ul>
+                <li>🥦 Nutrition and diet questions</li>
+                <li>🩺 Diet tips for health conditions</li>
+                <li>💪 Fitness and wellness advice</li>
+                <li>🍽️ Meal planning guidance</li>
+              </ul>
+              <p>What would you like to know today?</p>
+              <small class="msg-time" id="welcomeTime"></small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typing indicator -->
+        <div class="typing-indicator" id="typingIndicator" style="display:none;">
+          <div class="msg-avatar">🥗</div>
+          <div class="typing-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+          <div id="chatError" class="error-msg" style="display:none;"></div>
+          <div class="chat-input-row">
+            <textarea
+              id="chatInput"
+              placeholder="Ask me anything about nutrition, diet, or healthy living…"
+              rows="2"
+              maxlength="1000"
+            ></textarea>
+            <button class="btn btn-primary send-btn" id="sendBtn" onclick="sendMessage()">
+              Send ➤
+            </button>
+          </div>
+          <div class="char-count"><span id="charCount">0</span>/1000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="chat-disclaimer">
+      ⚕️ <strong>Medical Disclaimer:</strong> NutriGuide AI provides general nutrition information only.
+      It is not a substitute for professional medical advice. Always consult a qualified healthcare provider
+      for medical decisions.
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>🥗 <strong>NutriGuide AI</strong> — Powered by <strong>IBM Granite</strong> via watsonx.ai</p>
+      <p class="footer-sub">© 2024 NutriGuide AI. For educational and informational purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
